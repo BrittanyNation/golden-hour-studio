@@ -64,7 +64,7 @@
 
     /* Lightbox */
     var box = document.getElementById("lightbox");
-    var visual = document.getElementById("lightbox-visual");
+    var photo = document.getElementById("lightbox-img");
     var title = document.getElementById("lightbox-title");
     var caption = document.getElementById("lightbox-caption");
     var current = 0;
@@ -81,8 +81,8 @@
       if (!vis.length) return;
       if (current >= vis.length) current = 0;
       var card = vis[current];
-      visual.className = "lightbox-visual " + card.getAttribute("data-visual");
-      visual.textContent = card.getAttribute("data-title").toUpperCase();
+      photo.src = card.getAttribute("data-img");
+      photo.alt = card.getAttribute("data-title");
       title.textContent = card.getAttribute("data-title");
       caption.textContent = card.getAttribute("data-caption") + " (" + (current + 1) + " of " + vis.length + ")";
     }
