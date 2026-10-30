@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Session — Golden Hour Studio</title>
+<meta name="description" content="Book a Golden Hour Studio session: choose a package, a date, and an available start time, add options, and confirm — the summary updates live and booking ends in a real confirmation.">
+<meta property="og:title" content="Book a Session — Golden Hour Studio">
+<meta property="og:description" content="A working photography booking flow: live totals, honest booked slots, validated details, and a confirmation with a booking reference.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brittanynation.github.io/golden-hour-studio/book.html">
+<meta property="og:image" content="https://brittanynation.github.io/golden-hour-studio/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="wrap">
+  <div class="brand">GOLDEN HOUR <span>STUDIO</span></div>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home & Gallery</a>
+    <a href="sessions.html">Sessions & Pricing</a>
+    <a href="book.html" aria-current="page">Book a Session</a>
+  </nav>
+</div></header>
+
+<main id="main" class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Book a session · Deposit 25% today</p>
+    <h1>Pick a session, a day, <em>and a time.</em></h1>
+    <p class="lede">Choose a package, then a date — available start times appear, with booked slots marked honestly. Add options if you want them; the summary on the right does the maths live, including your deposit.</p>
+  </section>
+
+  <p id="booking-status" class="sr-only" role="status" aria-live="polite"></p>
+
+  <section id="booking-section">
+    <div class="grid2">
+      <form id="booking-form" novalidate>
+        <h3>1 · Choose your session</h3>
+        <div class="pkg-grid">
+          <button type="button" class="pkg-btn" data-package="mini" aria-pressed="false"><span class="p-name">Mini Session</span><span class="p-price">$185</span>30 minutes · 10 edited photos</button>
+          <button type="button" class="pkg-btn" data-package="portrait" aria-pressed="false"><span class="p-name">Portrait Session</span><span class="p-price">$325</span>60 minutes · 25 edited photos</button>
+          <button type="button" class="pkg-btn" data-package="family" aria-pressed="false"><span class="p-name">Family Session</span><span class="p-price">$425</span>75 minutes · 35 edited photos</button>
+          <button type="button" class="pkg-btn" data-package="branding" aria-pressed="false"><span class="p-name">Branding Session</span><span class="p-price">$550</span>2 hours · 40 edited photos + headshots</button>
+        </div>
+
+        <h3>2 · Date, time &amp; group</h3>
+        <label for="session-date">Session date</label>
+        <input type="date" id="session-date" name="session-date">
+        <p class="error" id="err-date"></p>
+        <label>Available start times</label>
+        <div class="slot-grid" id="slot-grid"></div>
+        <p class="error" id="err-slot"></p>
+        <label for="people">How many people will be photographed?</label>
+        <select id="people" name="people">
+          <option value="1">1 person</option>
+          <option value="2" selected>2 people</option>
+          <option value="3">3 people</option>
+          <option value="4">4 people</option>
+          <option value="5">5 people</option>
+          <option value="6">6 people</option>
+          <option value="7">7 people</option>
+          <option value="8">8 people</option>
+        </select>
+        <label for="location">Session location</label>
+        <select id="location" name="location">
+          <option>Studio</option>
+          <option>Riverside Park</option>
+          <option>Downtown</option>
+          <option>At home / client location</option>
+        </select>
+
+        <h3>3 · Add-ons (optional)</h3>
+        <div class="check"><input type="checkbox" id="addon-hour" data-addon="extraHour"><label for="addon-hour">Extra hour of coverage — +$75</label></div>
+        <div class="check"><input type="checkbox" id="addon-rush" data-addon="rush"><label for="addon-rush">Rush gallery, 48 hours — +$45</label></div>
+        <div class="check"><input type="checkbox" id="addon-prints" data-addon="prints"><label for="addon-prints">Prints pack, five 8×10 prints — +$60</label></div>
+        <div class="check"><input type="checkbox" id="addon-styling" data-addon="styling"><label for="addon-styling">Hair &amp; makeup styling — +$85</label></div>
+
+        <h3>4 · Your details</h3>
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" name="full-name" autocomplete="name">
+        <p class="error" id="err-name"></p>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <p class="error" id="err-email"></p>
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+        <p class="error" id="err-phone"></p>
+        <label for="notes">Anything we should know? (optional)</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Kids' ages, outfit plans, accessibility needs, a Pinterest board link…"></textarea>
+
+        <div class="cta-row"><button type="submit" class="btn btn-amber">Confirm booking →</button></div>
+        <p class="hint">Demo note: this is a working front-end booking flow. Confirming creates a booking reference in your browser only — no real booking is placed and no payment is taken.</p>
+      </form>
+
+      <aside class="summary" aria-label="Booking summary">
+        <h3>Your booking summary</h3>
+        <div class="row"><span>Session</span><strong id="sum-package">—</strong></div>
+        <div class="row"><span>When</span><span id="sum-when">Not chosen yet</span></div>
+        <div class="row"><span>Add-ons</span><span id="sum-addons">None</span></div>
+        <div class="row total"><span>Total</span><strong id="sum-total">$0</strong></div>
+        <div class="row"><span>Deposit</span><strong id="sum-deposit">—</strong></div>
+        <div class="row"><span>Balance</span><span id="sum-balance">—</span></div>
+        <p class="hint" style="color:var(--sand)">The studio is closed on Sundays. Booked start times are shown crossed out and can't be selected.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="confirmation" class="confirmation hidden" tabindex="-1">
+    <h2>You're booked in — thank you!</h2>
+    <p>Your booking reference is <span class="ref" id="conf-ref">GH-000000</span></p>
+    <p id="conf-details"></p>
+    <p>What happens next in a real studio flow: a deposit link and a short prep guide would arrive by email, and your gallery would be delivered 7 days after the session (48 hours with Rush).</p>
+    <div class="cta-row">
+      <a class="btn btn-amber" href="index.html">Browse galleries again</a>
+      <a class="btn btn-ghost" href="book.html">Book another session</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="prep-h">
+    <h2 id="prep-h">Before your session</h2>
+    <div class="notes">
+      <div class="note"><h3>What to wear</h3><p>Solid colors in warm, earthy tones photograph best in golden light. Avoid tiny stripes and big logos.</p></div>
+      <div class="note"><h3>Little ones</h3><p>Feed and nap first when you can — family sessions build in breaks, and the 5:00 PM slot is the kindest light of the day.</p></div>
+      <div class="note"><h3>Running late?</h3><p>Sessions start at the booked time. Fifteen minutes of grace is built in; after that we trim the session, not the photo count promise — we rebook instead.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p><strong>Golden Hour Studio</strong> is a fictional business created as an original front-end design portfolio concept by Brittany Nation. Bookings made here are stored only in your browser as a demo.</p>
+  <p>Design workflow: Sketch &amp; Webflow · Built with hand-written HTML, CSS &amp; JavaScript · <a href="index.html">Home &amp; Gallery</a> · <a href="sessions.html">Sessions &amp; Pricing</a></p>
+</div></footer>
+<script src="studio.js"></script>
+</body>
+</html>
