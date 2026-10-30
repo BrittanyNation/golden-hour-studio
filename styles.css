@@ -49,10 +49,14 @@ footer{background:var(--ink);color:var(--sand);padding:2rem 0;margin-top:3rem}fo
 .filter-btn{border:2px solid var(--line);background:#fff;padding:.55rem 1.1rem;border-radius:999px;font-family:Arial,sans-serif;font-size:.9rem;cursor:pointer;color:var(--ink)}
 .filter-btn.selected{border-color:var(--amber-dark);background:#FBEED3;font-weight:700}
 .gallery-card button.view-btn{margin-top:.75rem}
+.card-visual.photo{padding:0;min-height:0;display:block;position:relative;background:var(--ink)}
+.card-visual.photo img{display:block;width:100%;height:210px;object-fit:cover}
+.visual-chip{position:absolute;left:.9rem;bottom:.9rem;padding:.3rem .75rem;border-radius:999px;font-size:.72rem;box-shadow:0 1px 4px rgba(0,0,0,.25)}
 .lightbox{position:fixed;inset:0;background:rgba(20,17,13,.88);display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
 .lightbox.open{display:flex}
 .lightbox-box{background:var(--cream);border-radius:16px;max-width:640px;width:100%;overflow:hidden}
-.lightbox-visual{min-height:280px;display:flex;align-items:flex-end;padding:1.5rem;color:#fff;font-family:Arial,sans-serif;font-weight:700;letter-spacing:.12em;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.lightbox-visual{background:var(--ink);line-height:0}
+.lightbox-visual img{display:block;width:100%;height:340px;object-fit:cover}
 .lightbox-body{padding:1.25rem 1.5rem 1.5rem}
 .lightbox-nav{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
 /* Booking */
