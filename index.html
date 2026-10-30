@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Hour Studio — Family, Portrait & Branding Photography</title>
+<meta name="description" content="Golden Hour Studio is a fictional photography studio. Browse real galleries by session type, compare honest session pricing, and book a session in a working booking flow.">
+<meta property="og:title" content="Golden Hour Studio — Photography Booking">
+<meta property="og:description" content="Family, portrait, and branding sessions with honest pricing and a booking flow that actually works — pick a package, a date, and a golden-hour slot.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brittanynation.github.io/golden-hour-studio/">
+<meta property="og:image" content="https://brittanynation.github.io/golden-hour-studio/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="wrap">
+  <div class="brand">GOLDEN HOUR <span>STUDIO</span></div>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html" aria-current="page">Home & Gallery</a>
+    <a href="sessions.html">Sessions & Pricing</a>
+    <a href="book.html">Book a Session</a>
+  </nav>
+</div></header>
+
+<main id="main" class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Photography studio · Sessions from $185</p>
+    <h1>Photos that feel like <em>the best light</em> of the day.</h1>
+    <p class="lede">Golden Hour Studio is a fictional portrait studio built as a front-end design portfolio piece. Families, portraits, and small-brand sessions — with pricing stated up front, galleries you can actually browse, and a booking flow that works end to end.</p>
+    <div class="meta-row"><span>Edited gallery in 7 days</span><span>Golden-hour slots daily</span><span>25% deposit to book</span><span>No hidden session fees</span></div>
+    <div class="cta-row">
+      <a class="btn btn-amber" href="book.html">Book a session →</a>
+      <a class="btn btn-ghost" href="sessions.html">Compare sessions & pricing</a>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Studio at a glance">
+    <div class="stat"><strong>$185</strong>Starting session price, stated before you book</div>
+    <div class="stat dark"><strong>7 days</strong>Standard gallery delivery — 48 hours with Rush</div>
+    <div class="stat"><strong>25%</strong>Deposit due today; the rest on session day</div>
+    <div class="stat dark"><strong>6 starts</strong>Session start times a day, including golden hour</div>
+  </section>
+
+  <section aria-labelledby="gallery-h">
+    <h2 id="gallery-h">Browse the galleries</h2>
+    <p class="hint">Filter by session type, then open any gallery to step through it with the lightbox controls or your arrow keys.</p>
+    <div class="filter-row" role="group" aria-label="Filter galleries">
+      <button type="button" class="filter-btn selected" data-filter="all" aria-pressed="true">All galleries</button>
+      <button type="button" class="filter-btn" data-filter="family" aria-pressed="false">Family</button>
+      <button type="button" class="filter-btn" data-filter="portrait" aria-pressed="false">Portrait</button>
+      <button type="button" class="filter-btn" data-filter="branding" aria-pressed="false">Branding</button>
+    </div>
+    <p id="gallery-status" class="sr-only" role="status" aria-live="polite"></p>
+    <div class="grid3" id="gallery-grid">
+      <article class="card gallery-card" data-category="family" data-title="The Alvarez Family at Riverside Park" data-caption="Family Session · 75 minutes · 35 edited photos · Riverside Park at golden hour" data-visual="v-amber">
+        <div class="card-visual v-amber">RIVERSIDE PARK</div>
+        <div class="card-body"><span class="badge badge-amber">Family</span><h3>The Alvarez Family</h3><p>Three kids, one patient dog, and the last twenty minutes of daylight at Riverside Park.</p><p class="price">Family Session — $425</p><button type="button" class="btn btn-primary view-btn">View gallery →</button></div>
+      </article>
+      <article class="card gallery-card" data-category="portrait" data-title="Maya — Senior Portrait Session" data-caption="Portrait Session · 60 minutes · 25 edited photos · Studio + downtown walls" data-visual="v-rose">
+        <div class="card-visual v-rose">DOWNTOWN WALLS</div>
+        <div class="card-body"><span class="badge">Portrait</span><h3>Maya — Senior Portraits</h3><p>Half studio, half downtown color walls. Two outfit changes, zero stiff poses.</p><p class="price">Portrait Session — $325</p><button type="button" class="btn btn-primary view-btn">View gallery →</button></div>
+      </article>
+      <article class="card gallery-card" data-category="branding" data-title="Fern & Flour Bakery — Brand Session" data-caption="Branding Session · 2 hours · 40 edited photos + headshots · On location at the bakery" data-visual="v-olive">
+        <div class="card-visual v-olive">FERN & FLOUR</div>
+        <div class="card-body"><span class="badge">Branding</span><h3>Fern &amp; Flour Bakery</h3><p>A morning of hands, flour, and window light — plus clean headshots for the whole team.</p><p class="price">Branding Session — $550</p><button type="button" class="btn btn-primary view-btn">View gallery →</button></div>
+      </article>
+      <article class="card gallery-card" data-category="family" data-title="The Nguyen Family — New Baby at Home" data-caption="Family Session · 75 minutes · 35 edited photos · At-home lifestyle session" data-visual="v-sand">
+        <div class="card-visual v-sand">AT HOME</div>
+        <div class="card-body"><span class="badge badge-amber">Family</span><h3>The Nguyen Family</h3><p>A slow at-home morning with a two-week-old — feeding breaks built into the plan.</p><p class="price">Family Session — $425</p><button type="button" class="btn btn-primary view-btn">View gallery →</button></div>
+      </article>
+      <article class="card gallery-card" data-category="portrait" data-title="Jordan — Studio Portrait Mini" data-caption="Mini Session · 30 minutes · 10 edited photos · Studio backdrop, one outfit" data-visual="v-ink">
+        <div class="card-visual v-ink">STUDIO BACKDROP</div>
+        <div class="card-body"><span class="badge">Portrait</span><h3>Jordan — Mini Session</h3><p>Thirty minutes, one backdrop, ten strong frames. Built for profiles and applications.</p><p class="price">Mini Session — $185</p><button type="button" class="btn btn-primary view-btn">View gallery →</button></div>
+      </article>
+      <article class="card gallery-card" data-category="branding" data-title="Atlas Bike Tours — Team Branding" data-caption="Branding Session · 2 hours · 40 edited photos + headshots · Trailhead + workshop" data-visual="v-dusk">
+        <div class="card-visual v-dusk">TRAILHEAD</div>
+        <div class="card-body"><span class="badge">Branding</span><h3>Atlas Bike Tours</h3><p>Guides, bikes, and the workshop wall — a full website and social set in one morning.</p><p class="price">Branding Session — $550</p><button type="button" class="btn btn-primary view-btn">View gallery →</button></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="story">“We tell every client the full price, the delivery date, and exactly how many edited photos they get — before anyone books. The booking page does the same maths you see here.”</div>
+
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How booking works</h2>
+    <div class="notes">
+      <div class="note"><h3>1 · Pick a session</h3><p>Four session types, each with its length, photo count, and full price on the Sessions page — nothing revealed later.</p></div>
+      <div class="note"><h3>2 · Choose date & time</h3><p>Pick a date and an available start time. Booked slots are marked honestly, and the studio rests on Sundays.</p></div>
+      <div class="note"><h3>3 · Confirm with 25%</h3><p>Your summary updates live as you add options. A 25% deposit holds the date; the balance is due on session day.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn btn-amber" href="book.html">Start a booking →</a></div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+  <div class="lightbox-box">
+    <div class="lightbox-visual v-amber" id="lightbox-visual">GALLERY</div>
+    <div class="lightbox-body">
+      <h3 id="lightbox-title">Gallery</h3>
+      <p id="lightbox-caption"></p>
+      <div class="lightbox-nav">
+        <button type="button" class="btn btn-ghost" id="lightbox-prev">← Previous</button>
+        <button type="button" class="btn btn-ghost" id="lightbox-next">Next →</button>
+        <button type="button" class="btn btn-primary" id="lightbox-close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <p><strong>Golden Hour Studio</strong> is a fictional business created as an original front-end design portfolio concept by Brittany Nation. No real bookings are taken and no payment is processed — the booking flow is a working front-end demo, and confirmations are generated in your browser.</p>
+  <p>Design workflow: Sketch &amp; Webflow · Built with hand-written HTML, CSS &amp; JavaScript · <a href="sessions.html">Sessions &amp; Pricing</a> · <a href="book.html">Book a Session</a></p>
+</div></footer>
+<script src="studio.js"></script>
+</body>
+</html>
